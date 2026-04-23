@@ -28,7 +28,8 @@ def init_db() -> None:
             category text not null,
             difficulty text not null,
             solved_on text not null,
-            created_at text not null
+            created_at text not null,
+            unique(leetcode_url, solved_on)
         )'''
     )
 

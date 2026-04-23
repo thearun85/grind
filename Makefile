@@ -1,10 +1,13 @@
-.PHONY: install fmt lint typecheck test check clean init
+.PHONY: install fmt lint typecheck test check clean init log
 
 install:
 	poetry install
 
 init:
 	python -m src.init_db
+
+log:
+	python -m src.leetlog
 
 test:
 	poetry run pytest -v -s
