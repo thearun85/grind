@@ -1,7 +1,8 @@
 .PHONY: install fmt lint typecheck test check clean init log
 
 install:
-	poetry install
+	poetry install --no-root
+	poetry run pre-commit install
 
 init:
 	python -m src.init_db
