@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "grind"
+version = "0.1.0"
+description = "A lightweight DSA problem tracker that syncs your markdown progress log to a local SQLite database, with automatic stats generation via GitHub Actions."
+authors = ["Arun Raghunath <noreply@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.11,<0.16.0)",
+    "mypy (>=1.20.2,<2.0.0)",
+    "pytest (>=9.0.3,<10.0.0)"
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.3"
+ruff = "^0.15"
+mypy = "^1.20.2"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "N", "PT"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "src"
+packages = ["src", "tests"]
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers --strict-config"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
