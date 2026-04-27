@@ -10,3 +10,5 @@
 - [x] https://leetcode.com/problems/baseball-game/	| Array | Easy | 2026-04-24
 - [x] https://leetcode.com/problems/valid-parentheses/	| Array | Easy | 2026-04-24
 - [x] https://leetcode.com/problems/min-stack/	| Array | Medium | 2026-04-24
+- [x] https://leetcode.com/problems/two-sum/	| Array | Medium | 2026-04-27
+- [x] https://leetcode.com/problems/valid-anagram/	| Array | Medium | 2026-04-27
